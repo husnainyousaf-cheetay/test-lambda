@@ -2,7 +2,7 @@ service: basic-serverless-lambda-python
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: python3.8
   stage: dev
   region: eu-central-1
 
@@ -17,8 +17,8 @@ functions:
     name: test-lambda
     handler: lambda.handler
     description: test-lambda
-    timeout: 2500 # seconds
-    memorySize: 500 # mb
+    timeout: 1500 # seconds
+    memorySize: 128 # mb
     package:
       patterns:
         - "!node_modules/**"
